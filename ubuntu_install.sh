@@ -54,7 +54,18 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 # 下载常用的配置文件
 cd ~
-mv ~/.vimrc ~/.vimrc.old
-mv ~/.zshrc ~/.zshrc.old
-wget https://github.com/IronSublimate/LinuxConfig/blob/master/home/.vimrc
-wget https://github.com/IronSublimate/LinuxConfig/blob/master/home/.zshrc
+if test -e ~/.vimrc; then
+    mv ~/.vimrc ~/.vimrc.old
+fi
+if test -e ~/.zshrc; then
+    mv ~/.zshrc ~/.zshrc.old
+fi
+wget https://raw.githubusercontent.com/IronSublimate/LinuxConfig/master/home/.vimrc
+wget https://raw.githubusercontent.com/IronSublimate/LinuxConfig/master/home/.zshrc
+
+# 下载常用软件
+sudo apt install -y neofetch sl build-essential python3-pip proxychains4
+
+# pip换源
+sudo pip3 install pip -U
+sudo pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
