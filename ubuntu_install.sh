@@ -49,7 +49,7 @@ sudo apt install zsh -y
 cd ~
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # zsh-syntax-highlighting
-cd ~ cd ~/.oh-my-zsh/plugins &&
+cd ~/.oh-my-zsh/plugins &&
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git 
 
 # 下载常用的配置文件
