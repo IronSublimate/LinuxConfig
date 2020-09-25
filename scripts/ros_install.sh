@@ -17,7 +17,7 @@ elif grep -Eq "20.04" /etc/issue; then
 fi
 
 sudo apt update
-sudo apt install -y ros-melodic-desktop-full
+sudo apt install -y ros-${ros_name}-desktop-full
 
 if test $ubuntu_version -lt 2004; then
 # 初始化 rosdep
