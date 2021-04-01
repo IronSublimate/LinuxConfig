@@ -14,6 +14,8 @@ elif grep -Eq "18.04" /etc/issue; then
 elif grep -Eq "20.04" /etc/issue; then
     ubuntu_version=2004
     ros_name="noetic"
+    echo "deb http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ focal main" | sudo tee /etc/apt/sources.list.d/ros-latest.list
+    curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE8868B172B4F42ED6FBAB17C654' | sudo apt-key add -
 fi
 
 sudo apt update
