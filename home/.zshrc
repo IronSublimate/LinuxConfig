@@ -76,7 +76,8 @@ plugins=(
     python
     ros
     sudo
-    extract 
+    extract
+    docker
     zsh-syntax-highlighting
 )
 
